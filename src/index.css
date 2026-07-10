@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-50: #f4f6fa;
+  --color-brand-100: #e8ecf5;
+  --color-brand-200: #d5def0;
+  --color-brand-500: #06b6d4; /* Redefining brand color to cyan */
+  --color-brand-900: #050608;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.4);
+}
+
+/* Micro-animations and utility effects */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glowing effects for Immersive UI */
+.shadow-cyan-glow {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.shadow-cyan-glow-lg {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.75);
+}
+
+.border-white-5 {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.border-white-10 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-immersive-bg {
+  background-color: #050608;
+}
+
+.bg-immersive-sidebar {
+  background-color: #0E1116;
+}
+
+.bg-immersive-header {
+  background-color: #0A0C10;
+}
+
+.bg-immersive-card {
+  background-color: #161B22;
+}
+

@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "Trip": {
+      "title": "Trip",
+      "description": "Represents a generated high-end travel itinerary with local experiences and precise timing.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the trip."
+        },
+        "userId": {
+          "type": "string",
+          "description": "The UID of the user who owns the trip."
+        },
+        "constraints": {
+          "type": "object",
+          "description": "The constraints and inputs for travel generation."
+        },
+        "profile": {
+          "type": "object",
+          "description": "The style, pace, rhythm and budget preferences."
+        },
+        "days": {
+          "type": "array",
+          "description": "A collection of day plans containing sequenced activities."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp when the trip was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp when the trip was last updated."
+        }
+      },
+      "required": ["id", "userId", "constraints", "profile", "days", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/trips/{tripId}": {
+      "schema": "Trip",
+      "description": "Database collection containing the executable itineraries generated for users."
+    }
+  }
+}

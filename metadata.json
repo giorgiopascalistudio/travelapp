@@ -1,0 +1,6 @@
+{
+  "name": "TravelOS",
+  "description": "Un sistema operativo di viaggio con co-pilot operativo in tempo reale, mappa sequenziale dei percorsi e gestione storica dei viaggi con Google Sign-In.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
